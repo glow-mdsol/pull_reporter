@@ -16,5 +16,7 @@ The script is invoked as:
 
     ruby script/main.rb -r repository -b branch_name
 
+where the `repository` is the full repository name (eg `glow-mdsol/pull_reporter`) and the `branch` is the branch into which the pull requests will have been made.
+
 ## Dependencies
 See the Gemfile
