@@ -1,7 +1,7 @@
 require 'octokit'
 require 'write_xlsx'
-require 'optparse'
 require 'highline/import'
+require 'optparse'
 require 'date'
 require 'yaml'
 
@@ -12,7 +12,7 @@ module Connector
       if self.get_auth.empty?
         username = ask("GitHub Username  ")
         password = ask("GitHub Password  ") {|q| q.echo ="*"}
-        options.merge!({:login => username, :oauth_token => password })
+        options.merge!({:login => username, :password => password })
       else
         options.merge!({:login => self.get_auth.first, :oauth_token => self.get_auth.last}) 
       end
